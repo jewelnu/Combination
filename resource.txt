@@ -1,0 +1,12 @@
+**************************************
+/*-----------------------------------*/
+file with directory 
+-------------------
+
+How to use OpenFileDialog to select a folder? 
+
+ FolderBrowserDialog fbd = new FolderBrowserDialog();
+ DialogResult result = fbd.ShowDialog();
+
+ string[] files = Directory.GetFiles(fbd.SelectedPath);
+ System.Windows.Forms.MessageBox.Show("Files found: " + files.Length.ToString(), "Message");
